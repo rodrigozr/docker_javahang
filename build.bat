@@ -1,1 +1,1 @@
-docker build -t javahang .
+docker build -t rodrigozr/javahang .
