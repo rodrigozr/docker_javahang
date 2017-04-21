@@ -1,0 +1,1 @@
+C:\j2sdk-1_4_2_19-windows-i586-p.exe /s || exit 0
