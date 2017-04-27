@@ -14,6 +14,7 @@ public final class HelloWorld {
 			System.out.println("Testing if just calling JFrame constructor hangs forever...");
 			new JFrame();
 			System.out.println("BUG IS FIXED!!! :)");
+			System.exit(0);
 		} catch (Throwable t) {
 			System.out.println(t.toString());
 		}
