@@ -1,23 +1,21 @@
 import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
 
-public final class HelloWorld extends JFrame {
-        private HelloWorld() {
-                setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                getContentPane().add(new JLabel("Hello, World!"));
-                pack();
-                setLocationRelativeTo(null);
-
-	    try {
-                  new JFrame().dispose();
-            } catch (Throwable t) {
-            }
-
+public final class HelloWorld {
+	public static void main(String[] args) {
+		new Thread(){
+			public void run() {
+				System.out.println("Showing first frame...");
+				new JFrame().show();
+			}
+		}.start();
+		try {
+			Thread.sleep(3000);
+			System.out.println("Testing if just calling JFrame constructor hangs forever...");
+			new JFrame();
+			System.out.println("BUG IS FIXED!!! :)");
+		} catch (Throwable t) {
+			System.out.println(t.toString());
+		}
 	}
-
-        public static void main(String[] args) {
-                new HelloWorld().setVisible(true);
-        }
 }
-
-
