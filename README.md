@@ -1,5 +1,5 @@
 # docker_javahang
-Demonstration of a servere Java hang issue on Windows Containers
+Demonstration of a severe Java hang issue on Windows Containers
 
 # How to test if the bug is fixed?
 docker run --rm rodrigozr/javahang java HelloWorld
